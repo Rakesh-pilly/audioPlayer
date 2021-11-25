@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+</head>
+<body>
+   
+    <header>
+            <h1>Audio player</h1>
+    </header>
+
+    <main>
+        <div class = "wrapper">
+
+            <canvas id = "canvas"></canvas>
+        </div>
+    
+       
+        <div id = "timerDiv">
+            <p id = 'crtTime'>
+            Timer min 00 : sec 00
+            </p>
+    
+            <p id = "durTime">
+            Duration min 00 : sec 00
+            </p>
+    
+        </div>
+        
+    
+    
+        <div id = 'btnDiv'>
+            <button  class = "customButton small">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <button id = "btn" class = "customButton large">
+                <i class="fas fa-play"></i>
+            </button>
+            <button  class = "customButton small">
+                <i class="fas fa-forward"></i>
+            </button>
+    
+    
+        </div>
+    
+    
+        <audio  id = "audio"> 
+            <source src = "musiq.mp3" type = "audio/mpeg"/>
+        </audio>
+    
+
+
+    </main>
+
+    
+    
+
+
+</body>
+<script src = "index.js"></script>
+</html>

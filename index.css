@@ -1,0 +1,70 @@
+
+body{
+    margin: 0;
+}
+header{
+    text-align: center;
+}
+
+.wrapper{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:50vh;
+}
+
+canvas{
+    
+    width: 60%;
+    height: 40vh;
+}
+
+#timerDiv{
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+#timerDiv p {
+    font-size:1.5rem;
+}
+
+#btnDiv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.customButton{
+    
+    background-color:transparent;
+   
+    color: rgb(48, 222, 245);
+    border-radius: 30px/30px;
+    
+    border: 1px solid rgb(17, 154, 172);
+    
+
+}
+
+.large{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 2rem;
+    
+    
+}
+.small{
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 1rem;
+}
