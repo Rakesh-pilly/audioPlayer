@@ -84,7 +84,7 @@ audio.ontimeupdate = function() {
         c.fillStyle = "rgba(255,0,0,0.5)"
         c.fillRect(i*10,a[i]+20,4,-30);
     }
-    //
+    //when the audio is completed the state will be reset 
     if(currentTime === dur){
         btn.innerHTML = `<i class="fas fa-play"></i>`;
         runState = false;
