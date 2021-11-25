@@ -17,10 +17,8 @@ let audio = document.getElementById('audio');
             audio.pause();
        }else{
         btn.innerHTML = `<i class="fas fa-pause"></i>`;
-
-           runState = true;
-           
-           audio.play();
+             runState = true;
+            audio.play();
        }
         
     });
@@ -28,15 +26,9 @@ let audio = document.getElementById('audio');
     //get the canvas elemet for the mainuplation on click
 
     let canvas = document.getElementById("canvas");
-    canvas.addEventListener('click',function(e){
+    canvas.addEventListener('click',(e) => getCursorPosition(canvas,e))
 
-        getCursorPosition(canvas,e)
-
-    })
-
-
-    //this function will help to interact with the canvas and abil to get the postion of the cursor position 
-    
+      //this function will help to interact with the canvas and abil to get the postion of the cursor position 
     function getCursorPosition(canvas, event) {
 
         // get the bounders of the canvas
@@ -51,38 +43,26 @@ let audio = document.getElementById('audio');
         audio.currentTime = timeToSet;
         audio.play();
         btn.innerHTML = `<i class="fas fa-pause"></i>`;
-
         runState = true;
-
-
     }
-
-   
 
     //to draw in the canvas we need to create context and the context is 2d
     //context is used alot in place so i used c for simple and easy to use
     let c =canvas.getContext("2d");
-
-
-    //getting the bounders for the cavnas for the mainuplation
+//getting the bounders for the cavnas for the mainuplation
 
     const rect = canvas.getBoundingClientRect()
     const x = rect.left;
     const right = rect.right-rect.left;
     const height = Math.floor(rect.bottom-rect.top);
-
-
-    //this function run where time update on the of the audio plays but this we create a animation t
+     //this function run where time update on the of the audio plays but this we create a animation t
     // effect for the canvas 
     audio.ontimeupdate = function() {
-
-       
         let currentTime = Math.floor(audio.currentTime);
         let min = String(Math.floor(currentTime/60)).padStart(2, '0')
         let sec = String(Math.floor(currentTime%60) ).padStart(2, '0')
         let dur = Math.floor(audio.duration)
         
-
         // updating the time to the elelemet every time it update
         document.getElementById("crtTime").innerText = ("Timer min "+ min+" : sec " + sec);
         document.getElementById("durTime").innerText = ("Duratin min " + String(Math.floor(dur/60)).padStart(2, '0') + " : sec " + String(Math.floor(dur%60) ).padStart(2, '0'));
@@ -109,21 +89,16 @@ let audio = document.getElementById('audio');
             c.fillRect(i*10,a[i]+20,4,-30);
 
         }
-        
-        
-
     }
 
     //for inital rendering the this function wil be draw a gray bar chart
-    
-
-    function draw(inital , end , color, arr){
+     function draw(inital , end , color, arr){
         for(let i = inital ; i<= end; i++){ 
             c.fillStyle = color;
             c.fillRect(i*10,arr[i]+20,4,-30);
         }
     }
-    draw(0,30,"rgba(128,128,128,0.5)", a)
+        draw(0,30,"rgba(128,128,128,0.5)", a)
 
    //this function crearte a statci tags for the canvas 
     function tag(x,y,color,text){
